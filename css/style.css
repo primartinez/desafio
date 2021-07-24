@@ -1,0 +1,121 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
+
+.navbar__img {
+  width: 14.625rem;
+  width: auto; }
+
+.enlaces__img {
+  width: 1.875rem;
+  height: auto; }
+
+.section__img {
+  width: 31.25rem;
+  height: auto; }
+
+body {
+  background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px; }
+
+footer {
+  background-color: black;
+  margin: auto auto;
+  padding: 15px 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; }
+
+.datos__li {
+  color: #FFFEFD;
+  list-style: none; }
+  .datos__li .font {
+    family: "Hind Vadodara", sans-serif;
+    size: 0.5em; }
+
+.intro {
+  margin-top: 0%;
+  padding: 30px 20px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start; }
+
+.intro__titulo {
+  color: #030303;
+  text-transform: uppercase;
+  background-color: #f0960f; }
+  .intro__titulo .font {
+    family: "Bebas Neue", cursive;
+    size: 0.938em; }
+
+.intro__parrafo {
+  color: #030303; }
+  .intro__parrafo .font {
+    family: "Hind Vadodara", sans-serif;
+    size: 0.75em; }
+
+.section {
+  padding: 10px;
+  margin: 20px 10px;
+  display: grid;
+  grid-template-columns: 2fr, 4fr;
+  grid-template-rows: 1fr, 2fr;
+  grid-template-areas: "section__imagen section__subtitulo" ". section__parrafo";
+  grid-column-gap: 25px; }
+
+.section__subtitulo {
+  color: #030303;
+  text-transform: uppercase;
+  background-color: #f0960f;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+  .section__subtitulo .font {
+    family: "Bebas Neue", cursive;
+    size: 0.75em; }
+
+.section__parrafo {
+  color: #030303;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center; }
+  .section__parrafo .font {
+    family: "Hind Vadodara", sans-serif;
+    size: 0.625em; }
+
+.sectionclass__clasificacion {
+  width: 800px;
+  padding: 40px;
+  margin-bottom: 30px;
+  background-color: #faf6f2;
+  display: grid;
+  grid-template-columns: 2fr, 4fr;
+  grid-template-rows: 6, 4fr;
+  grid-template-areas: "img1 texto1" "img2 texto2" "img3 texto3" "img4 texto4" "img5 texto5" "img6 texto6";
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+  justify-items: center;
+  align-items: center; }
+
+.img1, .img2, .img3, .img4, .img5, .img6, img {
+  width: 300px;
+  justify-self: center;
+  align-self: center;
+  margin: 10px auto; }
+
+.texto1, .texto2, .texto3, .texto4, .texto5, .texto6 p {
+  justify-self: center;
+  align-self: center;
+  margin: 10px auto;
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 15px; }

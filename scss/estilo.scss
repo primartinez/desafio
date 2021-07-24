@@ -1,0 +1,174 @@
+* {margin: 0%; padding: 0%; box-sizing: border-box;}
+
+@import "colores";
+@import "text";
+@import "imag";
+
+@mixin estilo ($family, $size, $color) {
+   font-family: $family;
+   font-size: $size;
+   color: $color;
+}
+
+@mixin condicion ($fondo) {
+   background-color: ($fondo);
+   @if $fondo == $colortit {
+      text-transform: uppercase;
+   }
+   
+   @else if $fondo == $colortext{
+       list-style: none;
+   }
+
+   @else {}
+}
+
+// CONTENIDO GENERAL
+body {
+   background: 
+     radial-gradient(black 3px, transparent 4px),
+     radial-gradient(black 3px, transparent 4px),
+     linear-gradient(#fff 4px, transparent 0),
+     linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+     linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+   #fff;
+   background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+ }
+
+// PIE DE PAGINA
+footer {
+   @include condicion($colortext);
+   margin:auto auto;
+   padding: 15px 15px;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+   align-content: center;
+}
+
+.datos__li {
+   @include estilo($textfooter, 0.5em,$colortextfooter);
+   @include condicion ($colortext);
+}
+
+// CONTENIDO
+
+
+.intro{
+   margin-top: 0%;
+   padding: 30px 20px;
+   margin: auto;
+   width: 100%;
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: flex-start;
+   }
+.intro__titulo{
+   @include estilo($titulo, 0.938em , $colortext);
+   @include condicion ($colortit );
+   padding-left: 15px;
+}
+
+.intro__parrafo{
+   @include estilo($parrafo,0.75em ,$colortext  );
+   background-color: $colortextfooter;
+}
+
+
+.section{ 
+   padding: 10px;
+   margin:20px 10px;
+   display:grid;
+   grid-template-columns: (2fr, 4fr);
+   grid-template-rows: (1fr, 2fr);
+   grid-template-areas: "section__imagen section__subtitulo"
+                        ". section__parrafo";   ;
+   grid-column-gap: 25px;
+}
+
+
+.section__subtitulo{
+   @include estilo($subtitulo, 0.75em ,$colortext );
+   @include condicion ($colortit );
+   width:auto;
+   display:flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   padding-bottom: 15px;
+}
+
+.section__parrafo{
+   @include estilo($parrafo, 0.625em ,$colortext );
+   @include condicion ($colortextfooter );
+   margin-top: 10px;
+   display:flex;
+   flex-direction: row-reverse;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+//   TABLA CLASIFICACION
+   .sectionclass__clasificacion
+   {width: 800px;
+    padding: 40px;
+    margin-bottom: 30px;
+    background-color:$colortabla
+    display:grid;
+    grid-template-columns: (4fr,2fr, 4fr, 4fr);
+    grid-template-rows: ( 6, 4fr );
+    grid-template-areas: 
+     ". img1 texto1 . "
+     ". img2 texto2 . "
+     ". img3 texto3 ."
+     ". img4 texto4 ."
+     ". img5 texto5 ."
+     ". img6 texto6 .";  
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+   }
+
+  .img1, .img2,  .img3, .img4, .img5, .img6, img
+   {width: 300px;
+    justify-self: center;
+    align-self: center;
+    margin:10px auto;
+   } 
+  
+  .texto1, .texto2, .texto3, .texto4, .texto5, .texto6 p {
+     justify-self: center;
+     align-self: center;
+     margin:10px auto;
+     @include estilo($parrafo, 0.425em, $colortext);
+     background-color:  $colortextfooter;
+}
+
+// PAGINA CONTACT
+.contacto__titulo{
+   @include estilo($titulo,0.938em,$colortext);
+   @include condicion($colortit);
+   padding-left: 15px;
+}
+
+.contacto__parrafo{
+   @include estilo($parrafo, 0.75em ,$colortext );
+   @include condicion($colortextfooter);
+}
+
+.mapita {
+   padding: 15px;
+   padding-right: 60px;
+   display: inline-block;
+}
+
+ .contextformu{ 
+   @include condicion( $colortabla);
+   width: 500px; 
+   display: inline-block;
+   padding-top: 15px;
+   margin-top: 20px;
+}

@@ -1,0 +1,21 @@
+@import "colores";
+@import "text";
+
+@mixin imgn ($width, $height) {
+    width: $width;
+    height: $height;
+}
+// logo
+.navbar__img{
+    @include imgn (14.625rem,auto)
+}
+
+// logos redes sociales
+.enlaces__img{
+    @include imgn (1.875rem,auto)
+}
+
+
+.section__img{
+    @include imgn (31.25rem,auto)
+}
